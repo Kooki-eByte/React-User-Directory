@@ -1,0 +1,44 @@
+[
+    {
+        "firstName": "Bob",
+        "lastName": "Cortez",
+        "age": 22,
+        "department": "Engineer",
+        "work": "Junior Software Engineer"
+    },
+    {
+        "firstName": "June",
+        "lastName": "Coffins",
+        "age": 35,
+        "department": "Management",
+        "work": "Sales Manager"
+    },
+    {
+        "firstName": "Madeline",
+        "lastName": "Rivera",
+        "age": 26,
+        "department": "Engineer",
+        "work": "Senior Software Engineer"
+    },
+    {
+        "firstName": "Pamela",
+        "lastName": "Anderson",
+        "age": 28,
+        "department": "Management",
+        "work": "Sales Team Lead"
+    },
+    {
+        "firstName": "John",
+        "lastName": "Doe",
+        "age": 41,
+        "department": "Engineer",
+        "work": "Project Manager"
+    },
+    {
+        "firstName": "Andrie",
+        "lastName": "Nevaro",
+        "age": 32,
+        "department": "Education",
+        "work": "Instructor"
+    }
+]
