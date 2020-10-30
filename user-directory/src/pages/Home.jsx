@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
+import { DisplayEmployees } from "../components/DisplayEmployees";
 import Employees from "../seed/randomEmps.json";
 
 
-
 export default function Home() {
+    // TODO Create a sorter that is configed to each button dynamically
+
+    const [sort, setSort] = useState(null)
+    let sortedProducts = [...Employees];
+    if (sort !== null) {
+        sortedProducts.sort((a, b) => {
+        if (a[sort] < b[sort]) {
+            return -1;
+        }
+        if (a[sort] > b[sort]) {
+            return 1;
+        }
+        return 0;
+        });
+    }
+
+
     return (
         <table className="table table-hover table-dark">
             <thead className="thead-dark">
@@ -11,8 +28,8 @@ export default function Home() {
                 <th scope="col">
                     <button
                     type="button"
-                    // onClick={() => requestSort('name')}
-                    // className={getClassNamesFor('name')}
+                    onClick={() => setSort("id")}
+                    // className={getClassNamesFor('id')}
                     >
                     ID
                     </button>
@@ -20,7 +37,7 @@ export default function Home() {
                 <th scope="col">
                     <button
                     type="button"
-                    // onClick={() => requestSort('name')}
+                    // onClick={() => setSort("name")}
                     // className={getClassNamesFor('name')}
                     >
                     Name
@@ -29,8 +46,8 @@ export default function Home() {
                 <th scope="col">
                     <button
                     type="button"
-                    // onClick={() => requestSort('price')}
-                    // className={getClassNamesFor('price')}
+                    // onClick={() => setSort("age")}
+                    // className={getClassNamesFor('age')}
                     >
                     Age
                     </button>
@@ -38,8 +55,8 @@ export default function Home() {
                 <th scope="col">
                     <button
                     type="button"
-                    // onClick={() => requestSort('stock')}
-                    // className={getClassNamesFor('stock')}
+                    // onClick={() => setSort("department")}
+                    // className={getClassNamesFor('department')}
                     >
                     Department
                     </button>
@@ -47,8 +64,8 @@ export default function Home() {
                 <th scope="col">
                     <button
                     type="button"
-                    // onClick={() => requestSort('stock')}
-                    // className={getClassNamesFor('stock')}
+                    // onClick={() => setSort("work")}
+                    // className={getClassNamesFor('work')}
                     >
                     Occupation
                     </button>
@@ -57,13 +74,7 @@ export default function Home() {
             </thead>
         <tbody>
             {Employees.map((employee) => (
-            <tr>
-                <th scope="row" key={employee.id}>{employee.id}</th>
-                <td>{`${employee.firstName} ${employee.lastName}`}</td>
-                <td>{employee.age}</td>
-                <td>{employee.department}</td>
-                <td>{employee.work}</td>
-            </tr>
+            <DisplayEmployees {...employee}/>
             ))}
         </tbody>
     </table>
