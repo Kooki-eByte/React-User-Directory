@@ -11,13 +11,11 @@ export const AllEmployees = (props) => {
                     <div className="card-header">{`${firstName} ${lastName}`}</div>
                     <div className="card-body">
                     <h5 className="card-title">{`Employee #${id}`}</h5>
-                    <p className="card-text">
-                        <ul>
-                            <li>{`Age: ${age}`}</li>
-                            <li>{`Department: ${department}`}</li>
-                            <li>{`Occupation: ${work}`}</li>
-                        </ul>
-                    </p>
+                    <ul className="card-text">
+                        <li>{`Age: ${age}`}</li>
+                        <li>{`Department: ${department}`}</li>
+                        <li>{`Occupation: ${work}`}</li>
+                    </ul>
                     </div>
                 </div>
             </div>

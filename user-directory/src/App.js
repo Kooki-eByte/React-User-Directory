@@ -17,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>User Employee Directory</h1>
         <Router>
           <Route exact path="/" component={Home} />
         </Router>
