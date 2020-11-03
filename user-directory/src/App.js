@@ -16,7 +16,7 @@ function App() {
         <h1>User Employee Directory</h1>
         <br />
         <Router>
-          <Route exact path="/" component={Home} />
+          <Route path="/" component={Home} />
         </Router>
       </header>
     </div>
